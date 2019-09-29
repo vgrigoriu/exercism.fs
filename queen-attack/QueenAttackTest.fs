@@ -27,7 +27,7 @@ let ``Queen must have positive column`` () =
 let ``Queen must have column on board`` () =
     create (4, 8) |> should equal false
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Can not attack`` () =
     let whiteQueen = (2, 4)
     let blackQueen = (6, 6)
