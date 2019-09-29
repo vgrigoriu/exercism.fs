@@ -57,7 +57,7 @@ let ``Can attack on second diagonal`` () =
     let blackQueen = (3, 1)
     canAttack blackQueen whiteQueen |> should equal true
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Can attack on third diagonal`` () =
     let whiteQueen = (2, 2)
     let blackQueen = (1, 1)
