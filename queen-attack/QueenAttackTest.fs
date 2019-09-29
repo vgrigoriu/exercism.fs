@@ -33,7 +33,7 @@ let ``Can not attack`` () =
     let blackQueen = (6, 6)
     canAttack blackQueen whiteQueen |> should equal false
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Can attack on same row`` () =
     let whiteQueen = (2, 4)
     let blackQueen = (2, 6)
