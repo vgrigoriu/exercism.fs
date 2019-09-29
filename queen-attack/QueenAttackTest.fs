@@ -39,7 +39,7 @@ let ``Can attack on same row`` () =
     let blackQueen = (2, 6)
     canAttack blackQueen whiteQueen |> should equal true
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Can attack on same column`` () =
     let whiteQueen = (4, 5)
     let blackQueen = (2, 5)
