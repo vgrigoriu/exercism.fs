@@ -23,7 +23,7 @@ let ``Queen must have row on board`` () =
 let ``Queen must have positive column`` () =
     create (2, -2) |> should equal false
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Queen must have column on board`` () =
     create (4, 8) |> should equal false
 
