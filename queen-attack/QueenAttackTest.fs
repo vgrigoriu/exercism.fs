@@ -15,7 +15,7 @@ let ``Queen with a valid position`` () =
 let ``Queen must have positive row`` () =
     create (-2, 2) |> should equal false
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Queen must have row on board`` () =
     create (8, 4) |> should equal false
 
