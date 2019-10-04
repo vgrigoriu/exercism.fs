@@ -17,7 +17,7 @@ let ``Empty accumulation produces empty accumulation`` () =
 let ``Identity accumulation returns unmodified list`` () =
     accumulate id [1; 2; 3] |> should equal [1; 2; 3]
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Accumulate squares`` () =
     accumulate (fun x -> x * x) [1; 2; 3] |> should equal [1; 4; 9]
 
