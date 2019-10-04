@@ -1,6 +1,6 @@
 ﻿module Raindrops
 
-let factors = [
+let private factors = [
     (3, "Pling")
     (5, "Plang")
     (7, "Plong")
