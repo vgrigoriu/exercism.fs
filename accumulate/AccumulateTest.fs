@@ -13,7 +13,7 @@ let reverse (str:string) = new string(str.ToCharArray() |> Array.rev)
 let ``Empty accumulation produces empty accumulation`` () =
     accumulate (fun x -> x + 1) List.empty |> should be Empty
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Identity accumulation returns unmodified list`` () =
     accumulate id [1; 2; 3] |> should equal [1; 2; 3]
 
