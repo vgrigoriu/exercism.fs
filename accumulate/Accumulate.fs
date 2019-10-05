@@ -1,6 +1,6 @@
 ﻿module Accumulate
 
-let rec accumulate (func: 'a -> 'b) (input: 'a list): 'b list =
+let accumulate (func: 'a -> 'b) (input: 'a list): 'b list =
     let rec go(input, acc) =
         match input with
         | [] -> acc
