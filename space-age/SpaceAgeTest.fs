@@ -11,7 +11,7 @@ open SpaceAge
 let ``Age on Earth`` () =
     age Earth 1000000000L |> should (equalWithin 0.01) 31.69
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Age on Mercury`` () =
     age Mercury 2134835688L |> should (equalWithin 0.01) 280.88
 
