@@ -10,13 +10,15 @@ let rec private addSorted (student: string) (students: string list): string list
 
 let empty: School = Map.empty
 
-let add (student: string) (grade: int) (school: School): School =
-    let students = school.TryFind(grade) |> Option.defaultValue []
-    let newStudents = addSorted student students
-    Map.add grade newStudents school
-
-let roster (school: School): string list =
-    school |> Seq.collect (fun kv -> kv.Value) |> List.ofSeq
-
 let grade (number: int) (school: School): string list =
     school.TryFind(number) |> Option.defaultValue []
+
+let add (student: string) (grade1: int) (school: School): School =
+    let students = grade grade1 school
+    let newStudents = addSorted student students
+    Map.add grade1 newStudents school
+
+let roster (school: School): string list =
+    school
+    |> Seq.collect (fun kv -> kv.Value)
+    |> List.ofSeq
