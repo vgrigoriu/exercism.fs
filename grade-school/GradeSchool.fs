@@ -18,4 +18,5 @@ let add (student: string) (grade: int) (school: School): School =
 let roster (school: School): string list =
     school |> Seq.collect (fun kv -> kv.Value) |> List.ofSeq
 
-let grade (number: int) (school: School): string list = failwith "You need to implement this function."
+let grade (number: int) (school: School): string list =
+    school.TryFind(number) |> Option.defaultValue []
