@@ -17,7 +17,7 @@ let ``Adding a student adds them to the sorted roster`` () =
     let school = studentsToSchool [("Aimee", 2)]
     roster school |> should equal ["Aimee"]
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Adding more student adds them to the sorted roster`` () =
     let school = studentsToSchool [("Blair", 2); ("James", 2); ("Paul", 2)]
     roster school |> should equal ["Blair"; "James"; "Paul"]
