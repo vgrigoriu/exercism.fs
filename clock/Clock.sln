@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Clock", "Clock.fsproj", "{2070C7E5-A95E-4435-958E-AB228B7572BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2070C7E5-A95E-4435-958E-AB228B7572BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2070C7E5-A95E-4435-958E-AB228B7572BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2070C7E5-A95E-4435-958E-AB228B7572BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2070C7E5-A95E-4435-958E-AB228B7572BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
