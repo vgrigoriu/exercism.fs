@@ -1,16 +1,17 @@
 module Clock
 
-type Clock = {hours: int; minutes: int}
+type Clock = {Hours: int; Minutes: int}
 
 let private modulo n m = ((n % m) + m) % m
 
 let create hours minutes =
-    let minutes' = modulo minutes 60
-    let hours' = hours + (minutes - minutes') / 60
-    { hours = modulo hours' 24; minutes = minutes' }
+    let normalizedMinutes = modulo minutes 60
+    let totalHours = hours + (minutes - normalizedMinutes) / 60
+    let normalizedHours = modulo totalHours 24
+    { Hours = normalizedHours; Minutes = normalizedMinutes }
 
-let add minutes (clock: Clock) = create clock.hours (clock.minutes + minutes)
+let add minutes (clock: Clock) = create clock.Hours (clock.Minutes + minutes)
 
-let subtract minutes (clock: Clock) = create clock.hours (clock.minutes - minutes)
+let subtract minutes (clock: Clock) = add -minutes clock
 
-let display (clock: Clock) = sprintf "%02i:%02i" clock.hours clock.minutes
+let display (clock: Clock) = sprintf "%02i:%02i" clock.Hours clock.Minutes
