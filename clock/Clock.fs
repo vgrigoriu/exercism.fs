@@ -1,6 +1,8 @@
 module Clock
 
-type Clock = {Hours: int; Minutes: int}
+type Clock =
+    { Hours: int
+      Minutes: int }
 
 let private modulo n m = ((n % m) + m) % m
 
