@@ -15,11 +15,11 @@ let ``Stating something`` () =
 let ``Shouting`` () =
     response "WATCH OUT!" |> should equal "Whoa, chill out!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Shouting gibberish`` () =
     response "FCECDFCAAB" |> should equal "Whoa, chill out!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Asking a question`` () =
     response "Does this cryogenic chamber make me look fat?" |> should equal "Sure."
 
