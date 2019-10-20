@@ -51,31 +51,31 @@ let ``Shouting numbers`` () =
 let ``No letters`` () =
     response "1, 2, 3" |> should equal "Whatever."
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Question with no letters`` () =
     response "4?" |> should equal "Sure."
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Shouting with special characters`` () =
     response "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!" |> should equal "Whoa, chill out!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Shouting with no exclamation mark`` () =
     response "I HATE THE DMV" |> should equal "Whoa, chill out!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Statement containing question mark`` () =
     response "Ending with ? means a question." |> should equal "Whatever."
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Non-letters with question`` () =
     response ":) ?" |> should equal "Sure."
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Prattling on`` () =
     response "Wait! Hang on. Are you going to be OK?" |> should equal "Sure."
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Silence`` () =
     response "" |> should equal "Fine. Be that way!"
 
