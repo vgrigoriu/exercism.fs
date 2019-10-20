@@ -99,11 +99,11 @@ let ``Starting with whitespace`` () =
 let ``Ending with whitespace`` () =
     response "Okay if like my  spacebar  quite a bit?   " |> should equal "Sure."
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Other whitespace`` () =
     response "\n\r \t" |> should equal "Fine. Be that way!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Non-question ending with whitespace`` () =
     response "This is a statement ending with whitespace      " |> should equal "Whatever."
 
