@@ -43,11 +43,11 @@ let ``Using acronyms in regular speech`` () =
 let ``Forceful question`` () =
     response "WHAT THE HELL WERE YOU THINKING?" |> should equal "Calm down, I know what I'm doing!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Shouting numbers`` () =
     response "1, 2, 3 GO!" |> should equal "Whoa, chill out!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``No letters`` () =
     response "1, 2, 3" |> should equal "Whatever."
 

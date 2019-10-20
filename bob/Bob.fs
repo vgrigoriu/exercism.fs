@@ -1,7 +1,8 @@
 ﻿module Bob
 
 let response (input: string): string =
-    let isShout = input |> Seq.filter System.Char.IsLetter |> Seq.forall System.Char.IsUpper
+    let letters = input |> Seq.filter System.Char.IsLetter
+    let isShout = not (Seq.isEmpty(letters)) && letters |> Seq.forall System.Char.IsUpper
     let isQuestion = (input |> Seq.last) = '?'
     if isQuestion && isShout then
         "Calm down, I know what I'm doing!"
