@@ -83,19 +83,19 @@ let ``Silence`` () =
 let ``Prolonged silence`` () =
     response "          " |> should equal "Fine. Be that way!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Alternate silence`` () =
     response "\t\t\t\t\t\t\t\t\t\t" |> should equal "Fine. Be that way!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Multiple line question`` () =
     response "\nDoes this cryogenic chamber make me look fat?\nNo." |> should equal "Whatever."
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Starting with whitespace`` () =
     response "         hmmmmmmm..." |> should equal "Whatever."
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Ending with whitespace`` () =
     response "Okay if like my  spacebar  quite a bit?   " |> should equal "Sure."
 
