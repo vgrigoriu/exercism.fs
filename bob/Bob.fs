@@ -3,7 +3,7 @@
 let response (input: string): string =
     let letters = input |> Seq.filter System.Char.IsLetter
     let isShout = not (Seq.isEmpty(letters)) && letters |> Seq.forall System.Char.IsUpper
-    let isSilence = input = ""
+    let isSilence = input.Trim() = ""
     let isQuestion = not (isSilence) && (input |> Seq.last) = '?'
     if isQuestion && isShout then
         "Calm down, I know what I'm doing!"

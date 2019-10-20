@@ -79,7 +79,7 @@ let ``Prattling on`` () =
 let ``Silence`` () =
     response "" |> should equal "Fine. Be that way!"
 
-[<Fact(Skip = "Remove to run test")>]
+[<Fact>]
 let ``Prolonged silence`` () =
     response "          " |> should equal "Fine. Be that way!"
 
